@@ -1,12 +1,12 @@
 {
-  "printWidth": 120,
+  "printWidth": 80,
   "proseWrap": "always",
-  "tabWidth": 4,
+  "tabWidth": 2,
   "requireConfig": false,
   "useTabs": false,
   "trailingComma": "none",
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "semi": true,
+  "semi": false,
   "endOfLine": "auto"
 }
