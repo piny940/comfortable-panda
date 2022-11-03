@@ -1,9 +1,12 @@
-import { Assignment, AssignmentEntry } from "../../features/entity/assignment/types";
-import { Course } from "../../features/course/types";
+import {
+  Assignment,
+  AssignmentEntry
+} from "../../features/entity/assignment/types"
+import { Course } from "../../features/course/types"
 
 export const mockCourse = (id: string): Course => {
-  return new Course(id, id, "");
-};
+  return new Course(id, id, "")
+}
 
 export const mockAssignmentEntry = (
   id: string,
@@ -11,7 +14,5 @@ export const mockAssignmentEntry = (
   closeTime: number,
   hasFinished: boolean
 ): AssignmentEntry => {
-  return new AssignmentEntry(id, id, dueTime, closeTime, hasFinished);
-};
-
-
+  return new AssignmentEntry(id, id, dueTime, closeTime, hasFinished)
+}

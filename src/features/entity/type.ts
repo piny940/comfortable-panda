@@ -1,28 +1,28 @@
-import { Course } from "../course/types";
+import { Course } from "../course/types"
 
 export interface EntityProtocol {
-    course: Course;
-    entries: Array<EntryProtocol>;
-    isRead: boolean;
+  course: Course
+  entries: Array<EntryProtocol>
+  isRead: boolean
 
-    getCourse(): Course;
+  getCourse(): Course
 
-    getEntriesMap(): Map<string, EntryProtocol>;
+  getEntriesMap(): Map<string, EntryProtocol>
 }
 
 export interface EntryProtocol {
-    id: string;
-    title: string;
-    dueTime: number;
-    hasFinished: boolean;
+  id: string
+  title: string
+  dueTime: number
+  hasFinished: boolean
 
-    getTimestamp(currentTime: number, showLateAcceptedEntry: boolean): number;
+  getTimestamp(currentTime: number, showLateAcceptedEntry: boolean): number
 
-    getDueDate(showLate: boolean): number;
+  getDueDate(showLate: boolean): number
 
-    getCloseDate(): number;
+  getCloseDate(): number
 
-    getID(): string;
+  getID(): string
 
-    save(hostname: string): Promise<void>;
+  save(hostname: string): Promise<void>
 }

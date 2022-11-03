@@ -1,28 +1,40 @@
 # ComfortablePandATS
+
 [![License](https://img.shields.io/github/license/comfortable-panda/ComfortablePandATS?color=orange)](https://github.com/comfortable-panda/ComfortablePandATS/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/comfortable-panda/ComfortablePandATS?include_prereleases)](https://github.com/comfortable-panda/ComfortablePandATS/releases)
-[![CodeQL](https://github.com/comfortable-panda/ComfortablePandATS/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/comfortable-panda/ComfortablePandATS/actions/workflows/codeql-analysis.yml)  
+[![CodeQL](https://github.com/comfortable-panda/ComfortablePandATS/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/comfortable-panda/ComfortablePandATS/actions/workflows/codeql-analysis.yml)
 
 A Web browser extention that makes PandA life comfortable.  
-**ONLY WORKS IN PandA**. Use [Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai) for other Sakai LMS.
+**ONLY WORKS IN PandA**. Use
+[Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai) for other
+Sakai LMS.
 
 ## Readme
-English | [Japanese](https://github.com/comfortable-panda/ComfortablePandATS/blob/master/README.md)
+
+English |
+[Japanese](https://github.com/comfortable-panda/ComfortablePandATS/blob/master/README.md)
 
 ## Comfortable Sakai Project
-This is a project to re-create Comfortable PandA to work with other Sakai LMS websites, and to contribute to Sakai Community.
-Developing in the repository of Kyoto University.
+
+This is a project to re-create Comfortable PandA to work with other Sakai LMS
+websites, and to contribute to Sakai Community. Developing in the repository of
+Kyoto University.
 [Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai)
 
 # Installation links
-**ONLY WORKS IN PandA**. Use [Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai) for other Sakai LMS.  
+
+**ONLY WORKS IN PandA**. Use
+[Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai) for other
+Sakai LMS.
+
 - [Google Chrome Store](https://chrome.google.com/webstore/detail/comfortable-panda/cecjhdkagakhonnmddjgncmdldmppnoe)
 - [Firefox](https://tinaxd.github.io/comfortable-panda-firefox-updates/index.html)
 - [Microsoft Edge Store](https://microsoftedge.microsoft.com/addons/detail/njbljhcmnodocldppoiejkcmcebpmljc)
 
-
 # Manual installation(not recommended)
-1. Download latest version of `Comfortable-PandA.zip` from [HERE](https://github.com/comfortable-panda/ComfortablePandATS/releases/tag/v3.5.2).
+
+1. Download latest version of `Comfortable-PandA.zip` from
+   [HERE](https://github.com/comfortable-panda/ComfortablePandATS/releases/tag/v3.5.2).
 2. Unzip `Comfortable-PandA.zip`.
 3. Go to `chrome://extensions/` on your Google Chrome.
 4. Enable **developer mode**.
@@ -31,44 +43,56 @@ Developing in the repository of Kyoto University.
 7. You are ready to use :)
 
 # Usage
+
 1. Login to PandA
 1. Proceed to main page.
 1. Done. Your upper tab color is changed and ☰ icon is displayed.
 
 # Features
+
 ## Color-coded course site tabs
+
 Colors course site tabs according to the assignment due date.
-- ![#f03c15](https://via.placeholder.com/15/e85555/000000?text=+)
-  Due date <= 1 Day ahead
-- ![#f03c15](https://via.placeholder.com/15/d7aa57/000000?text=+)
-  Due date <= 5 Days ahead
-- ![#f03c15](https://via.placeholder.com/15/62b665/000000?text=+)
-  Due date <= 14 Days ahead
+
+- ![#f03c15](https://via.placeholder.com/15/e85555/000000?text=+) Due date <= 1
+  Day ahead
+- ![#f03c15](https://via.placeholder.com/15/d7aa57/000000?text=+) Due date <= 5
+  Days ahead
+- ![#f03c15](https://via.placeholder.com/15/62b665/000000?text=+) Due date <= 14
+  Days ahead
 
 ## Notification Badge
+
 Tells your unchecked latest assignments.
 
 If you open lecture page with notification badge on, the badge will disappear.
 
 ## miniPandA (Side-menu)
-Click ☰ to open miniPandA.
-All available assignments as well as quizzes will be displayed.
-You can add your custom assignment to miniPandA with PLUS button located on the upper right hand side.
 
-Also check box is available for you to distinguish completed assignments from working assignments.
+Click ☰ to open miniPandA. All available assignments as well as quizzes will be
+displayed. You can add your custom assignment to miniPandA with PLUS button
+located on the upper right hand side.
+
+Also check box is available for you to distinguish completed assignments from
+working assignments.
 
 ## Cache
-In order to reduce the network load on PandA, we have implemented a cache function for getting assignments and quizzes.
-The default cache interval is as follows
+
+In order to reduce the network load on PandA, we have implemented a cache
+function for getting assignments and quizzes. The default cache interval is as
+follows
+
 - Assignment fetching --- 2 minutes
-- Quiz fetching --- 10 minutes  
+- Quiz fetching --- 10 minutes
 
 The cache time can be changed in the configuration.
 
 # Screenshot
+
 ![](https://user-images.githubusercontent.com/41512077/140854635-974aee4b-fea3-4051-8956-ac696d1648ec.png)
 
 # Update Log
+
 - 2020/05/20 v0.9.0 Prototype release
 - 2020/05/21 v1.0.0 Release
 - 2020/05/22 v1.0.1 Fixed some minor bugs & refactored
@@ -96,26 +120,34 @@ The cache time can be changed in the configuration.
 - 2021/05/16 v3.4.1 Fixed minor bugs.
 - 2021/05/17 v3.5.0 Support for color universal design.
 - 2021/05/17 v3.5.2 Color code assignments with due date more than 14days
-- 2021/11/24 v4.0.0 Merged [Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai).
-Now supports English locale. Re-wrote codes.
+- 2021/11/24 v4.0.0 Merged
+  [Comfortable-Sakai](https://github.com/kyoto-u/comfortable-sakai). Now
+  supports English locale. Re-wrote codes.
 
 # How to compile from source code
+
 - Run
+
 ```
 npm install
-```  
-for the first time.  
+```
+
+for the first time.
 
 - Then Run
+
 ```
 npx webpack
 ```
+
 in the root directory of cloned repository.
 
 # How to run tests
+
 ```
 npm test
 ```
 
 # License
+
 Apache-2.0 License
