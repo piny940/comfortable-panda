@@ -1,7 +1,7 @@
-const path = require("path");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const path = require("path")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
 
 const MODE = process.env.NODE_ENV || "development"
 
@@ -38,11 +38,11 @@ module.exports = {
       ]
     })
   ]
-};
+}
 
-if (MODE === 'production') {
+if (MODE === "production") {
   module.exports.optimization = {
     minimize: true,
     minimizer: [new TerserPlugin()]
-  };
+  }
 }

@@ -15,21 +15,15 @@
   },
   "content_scripts": [
     {
-      "js": [
-        "content_script.js"
-      ],
-      "css": [
-        "css/comfortable-sakai.css"
-      ],
+      "js": ["content_script.js"],
+      "css": ["css/comfortable-sakai.css"],
       "matches": ["https://panda.ecs.kyoto-u.ac.jp/*"]
     }
   ],
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage"],
   "web_accessible_resources": [
     {
       "resources": [
