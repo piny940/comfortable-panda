@@ -33,7 +33,7 @@ export const decodeAssignmentFromArray = (
     )
     const isRead: boolean = assignment.isRead
     const entries: Array<AssignmentEntry> = []
-    for (const e of assignment.entries) {
+    for (const e of assignment.entries || []) {
       const entry = new AssignmentEntry(
         e.id,
         e.title,
