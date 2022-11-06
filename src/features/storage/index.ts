@@ -14,12 +14,12 @@ export const fromStorage = <T>(
   return new Promise(function (resolve) {
     get(ref(db, key)).then((snapshot) => {
       if (snapshot.exists() && key in snapshot.val()) {
-        console.log('fromStorage', snapshot.val())
         resolve(decoder(snapshot.val()[key]))
       } else {
         throw new Error()
       }
-    }).catch(() => {
+    })
+    .catch(() => {
       chrome.storage.local.get(hostname, function (items: any) {
         if (hostname in items && key in items[hostname]) {
           set(ref(db, key), {
@@ -38,7 +38,6 @@ export const loadHostName = (): Promise<string | undefined> => {
   return new Promise(function (resolve) {
     get(ref(db, `${HostnameStorage}`)).then((snapshot) => {
       if (snapshot.exists() && HostnameStorage in snapshot.val()) {
-        console.log('loadHostName', snapshot.val())
         resolve(snapshot.val()[HostnameStorage])
       } else {
         throw new Error()
@@ -84,6 +83,9 @@ export const toStorage = (
 
 export const saveHostName = (hostname: string): Promise<string> => {
   return new Promise(function (resolve) {
+    set(ref(db, `${HostnameStorage}`), {
+      [HostnameStorage]: hostname
+    })
     chrome.storage.local.set({ [HostnameStorage]: hostname }, () => {
       resolve("saved")
     })
