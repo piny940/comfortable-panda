@@ -18,6 +18,8 @@ import {
 } from "../features/entity/memo/saveMemo"
 import { createFavoritesBar, resetFavoritesBar } from "./favoritesBar"
 import { getSakaiCourses } from "../features/course/getCourse"
+import { onValue, ref } from "firebase/database"
+import { db } from "../firebase"
 
 export const MiniSakaiContext = React.createContext<{
   settings: Settings
@@ -53,6 +55,12 @@ export class MiniSakaiRoot extends React.Component<
   }
 
   componentDidMount() {
+    onValue(ref(db), (snapshot) => {
+      if (snapshot.exists()) {
+        chrome.storage.local.set(snapshot.val())
+        this.reloadEntities()
+      }
+    })
     getStoredSettings(this.props.hostname).then((s) => {
       this.setState({ settings: s }, () => {
         this.reloadEntities()
