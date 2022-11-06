@@ -1,5 +1,5 @@
 import { HostnameStorage } from "../../constant"
-import { ref, set } from 'firebase/database'
+import { get, ref, set } from 'firebase/database'
 import { db } from "../../firebase"
 
 export const fromStorage = <T>(
@@ -12,7 +12,14 @@ export const fromStorage = <T>(
       if (key in items) {
         resolve(decoder(items[key]))
       } else {
-        resolve(decoder(undefined))
+        get(ref(db, key)).then((snapshot) => {
+          if (snapshot.exists()) {
+            chrome.storage.local.set({[key]: snapshot.val()})
+            resolve(decoder(snapshot.val()))
+          } else {
+            resolve(decoder(undefined))
+          }
+        })
       }
     })
   })
