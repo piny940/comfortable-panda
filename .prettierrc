@@ -1,12 +1,8 @@
 {
-  "printWidth": 80,
-  "proseWrap": "always",
+  "endOfLine": "lf",
   "tabWidth": 2,
-  "requireConfig": false,
   "useTabs": false,
-  "trailingComma": "none",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
   "semi": false,
-  "endOfLine": "auto"
+  "singleQuote": true,
+  "trailingComma": "es5"
 }
